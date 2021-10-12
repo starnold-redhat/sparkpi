@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 def produce_pi(scale):
-    spark = SparkSession.builder.master.appName("PythonPi").getOrCreate()
+    spark = SparkSession.builder.appName("PythonPi").getOrCreate()
     n = 100000 * scale
 
     def f(_):
